@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
                 List<Movie> movies = response.body().getResults();
-                Log.d(TAG, "Number of movies received: " + movies.size());
+                Log.d(TAG, "Number of movies received:" + movies.size());
                 recyclerView.setAdapter(new MoviesAdapter(movies,R.layout.list_item_movie,getApplicationContext()));
             }
 
